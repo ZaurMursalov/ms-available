@@ -1,0 +1,63 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create user_category table
+      author: Zaur Mursalov
+      changes:
+        - createTable:
+            tableName: user_category
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+#              - column:
+#                  name: user_id
+#                  type: bigint
+#                  constraints:
+#                    foreignKeyName: fk_user_category_to_user
+#                    references: user(id)
+#                    nullable: true
+#              - column:
+#                  name: category_id
+#                  type: bigint
+#                  constraints:
+#                    foreignKeyName: fk_user_category_to_category
+#                    references: category(id)
+#                    nullable: true
+#              - column:
+#                  name: is_active
+#                  type: boolean
+#                  defaultValueBoolean: false
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: comment_id
+#                  type: bigint
+#                  constraints:
+#                    foreignKeyName: fk_user_category_to_assign_posted_job
+#                    references: assign_posted_job(id)
+#                    nullable: true
+              - column:
+                  name: master
+                  type: boolean
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: true
+              - column:
+                  name: opinionated
+                  type: boolean
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: datetime
+                  constraints:
+                    nullable: false
+
+
+
+            remarks: Table to store information about  user_category_to_user

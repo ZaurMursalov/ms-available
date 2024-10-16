@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create post_job table
+      author: Zaur Mursalov
+      changes:
+        - createTable:
+            tableName: post_job
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+#              - column:
+#                  name: user_id
+#                  type: bigint
+#                  constraints:
+#                    foreignKeyName: fk_post_job_to_user
+#                    references: user(id)
+#                    nullable: true
+#              - column:
+#                  name: category_id
+#                  type: bigint
+#                  constraints:
+#                    foreignKeyName: fk_post_job_to_category
+#                    references: category(id)
+#                    nullable: true
+              - column:
+                  name: description
+                  type: text
+                  constraints:
+                    nullable: true
+              - column:
+                  name: employees_number
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: datetime
+                  constraints:
+                    nullable: true
+
+
+
+            remarks: Table to store information about  post_job

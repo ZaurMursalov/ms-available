@@ -1,0 +1,79 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create company table
+      author: Zaur Mursalov
+      changes:
+        - createTable:
+            tableName: company
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+#              - column:
+#                  name: posted_job_id
+#                  type: bigint
+#                  constraints:
+#                    foreignKeyName: fk_company_to_post_job
+#                    references: post_job(id)
+#                    nullable: true
+#              - column:
+#                  name: master_id
+#                  type: bigint
+#                  constraints:
+#                    foreignKeyName: fk_company_to_category
+#                    references: category(id)
+#                    nullable: true
+              - column:
+                  name: master_status
+                  type: text
+                  constraints:
+                    nullable: true
+              - column:
+                  name: company_status
+                  type: text
+                  constraints:
+                    nullable: true
+              - column:
+                  name: master_date_created
+                  type: datetime
+                  constraints:
+                    nullable: true
+              - column:
+                  name: master_request_time
+                  type: datetime
+                  constraints:
+                    nullable: true
+              - column:
+                  name: accept_time
+                  type: datetime
+                  constraints:
+                    nullable: true
+              - column:
+                  name: remove_time
+                  type: datetime
+                  constraints:
+                    nullable: true
+              - column:
+                  name: started_time
+                  type: datetime
+                  constraints:
+                    nullable: true
+              - column:
+                  name: comployed_time
+                  type: datetime
+                  constraints:
+                    nullable: true
+              - column:
+                  name: is_active
+                  type: boolean
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: true
+
+
+
+            remarks: Table to store information about company

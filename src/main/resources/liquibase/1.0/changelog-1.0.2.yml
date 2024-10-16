@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create category table
+      author: Zaur Mursalov
+      changes:
+        - createTable:
+            tableName: category
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: true
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
+
+
+            remarks: Table to store information about category
